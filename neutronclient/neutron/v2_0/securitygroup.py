@@ -190,6 +190,9 @@ class CreateSecurityGroupRule(neutronV20.CreateCommand):
             default='ingress', choices=['ingress', 'egress'],
             help=_('Direction of traffic: ingress/egress'))
         parser.add_argument(
+            '--dscp',
+            help='dscp of packet')
+        parser.add_argument(
             '--ethertype',
             default='IPv4',
             help=_('IPv4/IPv6'))
@@ -249,6 +252,9 @@ class CreateSecurityGroupRule(neutronV20.CreateCommand):
         if parsed_args.tenant_id:
             body['security_group_rule'].update(
                 {'tenant_id': parsed_args.tenant_id})
+        if parsed_args.dscp:
+            body['security_group_rule'].update(
+                {'dscp': parsed_args.dscp})
         return body
 
 

@@ -155,17 +155,18 @@ class CLITestV20SecurityGroupsJSON(test_cli20.CLITestV20Base):
         remote_ip_prefix = '10.0.0.0/24'
         security_group_id = '1'
         remote_group_id = '1'
+        dscp = '8'
         args = ['--remote_ip_prefix', remote_ip_prefix, '--direction',
                 direction, '--ethertype', ethertype, '--protocol', protocol,
                 '--port_range_min', port_range_min, '--port_range_max',
                 port_range_max, '--remote_group_id', remote_group_id,
-                security_group_id]
+                security_group_id, '--dscp', dscp]
         position_names = ['remote_ip_prefix', 'direction', 'ethertype',
                           'protocol', 'port_range_min', 'port_range_max',
-                          'remote_group_id', 'security_group_id']
+                          'remote_group_id', 'security_group_id', 'dscp']
         position_values = [remote_ip_prefix, direction, ethertype, protocol,
                            port_range_min, port_range_max, remote_group_id,
-                           security_group_id]
+                           security_group_id, dscp]
         self._test_create_resource(resource, cmd, None, myid, args,
                                    position_names, position_values)
 
