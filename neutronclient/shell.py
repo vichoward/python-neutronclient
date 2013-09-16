@@ -49,6 +49,7 @@ from neutronclient.neutron.v2_0 import nvp_qos_queue
 from neutronclient.neutron.v2_0 import nvpnetworkgateway
 from neutronclient.neutron.v2_0 import policyprofile
 from neutronclient.neutron.v2_0 import port
+from neutronclient.neutron.v2_0.qos import qos
 from neutronclient.neutron.v2_0 import quota
 from neutronclient.neutron.v2_0 import router
 from neutronclient.neutron.v2_0 import securitygroup
@@ -167,6 +168,11 @@ COMMAND_V2 = {
     'lb-healthmonitor-disassociate': (
         lb_healthmonitor.DisassociateHealthMonitor
     ),
+    'qos-create': qos.CreateQoS,
+    'qos-delete': qos.DeleteQoS,
+    'qos-list': qos.ListQoS,
+    'qos-show': qos.ShowQoS,
+    'qos-update': qos.UpdateQoS,
     'queue-create': nvp_qos_queue.CreateQoSQueue,
     'queue-delete': nvp_qos_queue.DeleteQoSQueue,
     'queue-show': nvp_qos_queue.ShowQoSQueue,
