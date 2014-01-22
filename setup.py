@@ -21,13 +21,15 @@ import setuptools
 #    setup_requires=['pbr'],
 #    pbr=True
 #)
-
 setuptools.setup(
+    home_page='http://www.openstack.org/',
     name='python-neutronclient',
+    summary='CLI and Client Library for OpenStack Networking',
     version='2.3.0',
     url='http://www.openstack.org/',
     author='OpenStack Networking Project',
-    email = 'openstack-dev@lists.openstack.org',
+    author_email = 'openstack-dev@lists.openstack.org',
+    description='This is the client API library for Neutron.',
     packages=['neutronclient'],
     entry_points={'console_scripts': [
         'neutron = neutronclient.shell:main',
