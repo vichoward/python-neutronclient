@@ -28,7 +28,7 @@ setuptools.setup(
     url='http://www.openstack.org/',
     author='OpenStack Networking Project',
     email = 'openstack-dev@lists.openstack.org',
-    packages='neutronclient',
+    packages=['neutronclient'],
     entry_points={'console_scripts': [
         'neutron = neutronclient.shell:main',
     ]},
