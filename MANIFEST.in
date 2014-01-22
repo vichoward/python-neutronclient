@@ -3,4 +3,6 @@ include LICENSE README.rst HACKING.rst
 include AUTHORS
 include ChangeLog
 include tools/*
+include setup.cfg
+include setup.py
 recursive-include tests *
