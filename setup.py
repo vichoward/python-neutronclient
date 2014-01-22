@@ -17,7 +17,31 @@
 # THIS FILE IS MANAGED BY THE GLOBAL REQUIREMENTS REPO - DO NOT EDIT
 import setuptools
 
-setuptools.setup(
-    setup_requires=['pbr'],
-    pbr=True
+#setuptools.setup(
+#    setup_requires=['pbr'],
+#    pbr=True
+#)
+
+setup(
+    name='python-neutronclient',
+    version='2.3.0',
+    home-page='http://www.openstack.org/',
+    author='OpenStack Networking Project',
+    author-email = openstack-dev@lists.openstack.org,
+    packages=neutronclient,
+    entry_points={'console_scripts': [
+        'neutron = neutronclient.shell:main',
+    ]},
+    classifiers=[
+        'Environment :: OpenStack',
+        'Intended Audience :: Developers',
+        'Intended Audience :: Information Technology',
+        'Intended Audience :: System Administrators',
+        'License :: OSI Approved :: Apache Software License',
+        'Operating System :: POSIX :: Linux',
+        'Programming Language :: Python',
+        'Programming Language :: Python :: 2',
+        'Programming Language :: Python :: 2.7',
+        'Programming Language :: Python :: 2.6',
+    ],
 )
