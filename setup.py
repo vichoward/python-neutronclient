@@ -22,7 +22,7 @@ import setuptools
 #    pbr=True
 #)
 
-setup(
+setuptools.setup(
     name='python-neutronclient',
     version='2.3.0',
     url='http://www.openstack.org/',
