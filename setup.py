@@ -25,9 +25,9 @@ import setuptools
 setup(
     name='python-neutronclient',
     version='2.3.0',
-    home-page='http://www.openstack.org/',
+    url='http://www.openstack.org/',
     author='OpenStack Networking Project',
-    author-email = 'openstack-dev@lists.openstack.org',
+    email = 'openstack-dev@lists.openstack.org',
     packages='neutronclient',
     entry_points={'console_scripts': [
         'neutron = neutronclient.shell:main',
