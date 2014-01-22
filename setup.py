@@ -19,4 +19,6 @@ import setuptools
 
 setuptools.setup(
     setup_requires=['pbr'],
-    pbr=True)
+    #this was causing auto completion of versioning for some reason
+    #pbr=True
+)
